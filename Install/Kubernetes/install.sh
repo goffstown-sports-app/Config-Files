@@ -5,10 +5,6 @@
 echo "If this script fails because of download, try rebooting and running again."
 echo "If that doesn't work then just run the script again every couple of minutes"
 
-# Install Docker
-curl -sSL get.docker.com | sh && \
-sudo usermod pi -aG docker
-
 # Disable Swap
 sudo dphys-swapfile swapoff && \
 sudo dphys-swapfile uninstall && \
