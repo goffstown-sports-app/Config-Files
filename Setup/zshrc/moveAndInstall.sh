@@ -8,4 +8,4 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 # Moving .zshrc
 rm ~/.zshrc
-cp ~/Documents/Github/Conifg-Files/Install/zshrc/.zshrc ~/.zshrc
+cp ~/Documents/Github/Conifg-Files/Setup/zshrc/.zshrc ~/.zshrc
