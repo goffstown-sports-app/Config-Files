@@ -2,7 +2,6 @@
 # Installing docker onto a RPI
 
 # Install Docker:
-curl -fsSL get.docker.com -o get-docker.sh
 sh get-docker.sh
 
 # Giving Docker Sudo Privildages:
