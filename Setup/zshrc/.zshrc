@@ -102,11 +102,7 @@ source $ZSH/oh-my-zsh.sh
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-{
-    neofetch
-} || {
-    sudo apt-get install neofetch
-}
+neofetch
 
 alias q=exit
 alias c=clear
