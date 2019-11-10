@@ -100,6 +100,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Alias and other configs:
 
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 {
     neofetch
 } || {
