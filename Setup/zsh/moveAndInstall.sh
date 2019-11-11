@@ -4,6 +4,7 @@
 
 # Installing Packages
 cd ~/.oh-my-zsh/custom/plugins
+rm -rf ~/.zsh/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 
 # Moving .zshrc
