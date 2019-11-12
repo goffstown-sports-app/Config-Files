@@ -1,0 +1,33 @@
+version: "3.7"
+
+volumes:
+  prometheus-data:
+  graphana-data:
+
+configs:
+  prometheus-config:
+    file: ./prometheus.yaml
+
+services:
+  prometheus:
+    hostname: prometheus
+    configs:
+      - source: prometheus-config
+        target: /prometheus.yaml
+    volumes:
+      - prometheus-data:/prometheus
+    ports:
+      - 9090:9090
+    image: ajeetraina/prometheus-armv7
+    command: [
+      --config.file, /prometheus.yaml,
+      --storage.tsdb.path, /prometheus
+    ]
+
+  graphana:
+    hostname: graphana
+    volumes:
+      - graphana-data:/var/lib/grafana
+    ports:
+      - 3000:3000
+    image: proxx/grafana-armv7
