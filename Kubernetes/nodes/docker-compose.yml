@@ -1,6 +1,6 @@
 version: '3.3'
 services:
-    node-exporter-linux-arm64:
+    node-exporter:
         container_name: node-exporter
         network_mode: host
         pid: host
