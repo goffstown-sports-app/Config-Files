@@ -7,4 +7,4 @@ services:
         restart: always
         volumes:
             - '/:/host:ro,rslave'
-        image: 'prom/node-exporter-linux-arm64:master'
+        image: 'prom/node-exporter-linux-armv7:master'
