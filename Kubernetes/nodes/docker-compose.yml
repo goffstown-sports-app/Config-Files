@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+    node-exporter-linux-arm64:
+        container_name: node-exporter
+        network_mode: host
+        pid: host
+        restart: always
+        volumes:
+            - '/:/host:ro,rslave'
+        image: 'prom/node-exporter-linux-arm64:master'
