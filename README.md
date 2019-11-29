@@ -9,7 +9,7 @@ General configuration files for the following services:
 * Jenkins
 * Prometheus
 
-There are also install scripts for the following servies:
+There are also install scripts for the following services:
 
 * Kubenetes
 * Docker 
