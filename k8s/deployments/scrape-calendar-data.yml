@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ghsapp-scrape-calendar-data
+spec:
+  selector:
+    matchLabels:
+      component: ghsAppPy
+  template:
+    metadata:
+      labels:
+        component: ghsAppPy
+    spec:
+      containers:
+        - name: scrape-calendar-data
+          image: ghsApp/scape-calendar-data:arm32v7
