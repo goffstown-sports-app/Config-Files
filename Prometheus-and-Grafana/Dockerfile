@@ -1,3 +1,3 @@
-FROM ajeetraina/prometheus-armv7
+FROM prom/prometheus
 
 COPY ./prometheus.yml /etc/prometheus/prometheus.yml
