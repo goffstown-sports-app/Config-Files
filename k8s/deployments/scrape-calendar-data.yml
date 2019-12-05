@@ -5,11 +5,11 @@ metadata:
 spec:
   selector:
     matchLabels:
-      component: ghsAppPy
+      ghsAppComponent: scrape-calendar-data
   template:
     metadata:
       labels:
-        component: ghsAppPy
+        ghsAppComponent: scrape-calendar-data
     spec:
       containers:
         - name: scrape-calendar-data
