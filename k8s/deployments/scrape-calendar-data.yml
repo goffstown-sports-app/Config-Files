@@ -13,4 +13,19 @@ spec:
     spec:
       containers:
         - name: scrape-calendar-data
-          image: ghsApp/scape-calendar-data:arm32v7
+          image: ghsapp/scape-calendar-data:arm32v7
+          volumeMounts:
+            - mountPath: /src/secrets
+              name: secrets-volume
+          resources:
+              requests:
+                memory: "400Mi"
+                cpu: "300m"
+              limits:
+                memory: "500Mi"
+                cpu: "500m"
+      volumes:
+        - name: secrets-volume
+          hostPath:
+            path: ~/secrets
+            type: Directory
