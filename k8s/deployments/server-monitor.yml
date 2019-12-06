@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ghsapp-server-monitor
+spec:
+  selector:
+    matchLabels:
+      ghsAppComponent: server-monitor
+  template:
+    metadata:
+      labels:
+        ghsAppComponent: server-monitor
+    spec:
+      containers:
+        - name: server-monitor
+          image: ghsapp/sever-monitor:arm32v7
+          resources:
+              requests:
+                memory: "400Mi"
+                cpu: "300m"
+              limits:
+                memory: "500Mi"
+                cpu: "500m"
+      volumes:
+        - name: secrets
+          hostPath:
+            path: ~/secrets
+            type: Directory
