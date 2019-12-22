@@ -1,0 +1,16 @@
+docker:
+  userName: "mattgleich"
+cycleTime: 20
+repos:
+  Scrape-Calendar-Data:
+    cloneURL: "https://github.com/goffstown-sports-app/Scrape-Calendar-Data.git"
+    imageName: "scrape-calendar-data"
+    imageTag: "arm32v7"
+  Server-Monitor:
+    cloneURL: "https://github.com/goffstown-sports-app/Server-Monitor.git"
+    imageName: "server-monitor"
+    imageTag: "arm32v7"
+  Status-Lights:
+    cloneURL: "https://github.com/goffstown-sports-app/Status-Lights.git"
+    imageName: "status-lights"
+    imageTag: "latest"
