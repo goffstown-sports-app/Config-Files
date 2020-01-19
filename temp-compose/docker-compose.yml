@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  scrape-calendar-data:
+    container_name: scrape-calendar-data
+    build: Scrape-Calendar-Data
+    network_mode: "host"
+    volumes:
+      - ~/secrets:/src/secrets
+  server-monitor:
+    container_name: server-monitor
+    build: Server-Monitor
+    network_mode: "host"
+    restart: unless-stopped
+    volumes:
+      - ~/secrets:/src/secrets
+  status-lights:
+    container_name: status-lights
+    privileged: true
+    image: ghsapp/status-lights
+    network_mode: "host"
+    restart: unless-stopped
+    volumes:
+      - ~/secrets:/src/secrets
