@@ -3,17 +3,17 @@ version: "3"
 services:
   scrape-calendar-data:
     container_name: scrape-calendar-data
-    build: Scrape-Calendar-Data
+    image: Scrape-Calendar-Data
     network_mode: "host"
     volumes:
-      - ~/secrets:/src/secrets
+      - ~/secrets:/scrapeCalendarData/secrets
   server-monitor:
     container_name: server-monitor
-    build: Server-Monitor
+    image: Server-Monitor
     network_mode: "host"
     restart: unless-stopped
     volumes:
-      - ~/secrets:/src/secrets
+      - ~/secrets:/serverMonitor/secrets
   status-lights:
     container_name: status-lights
     privileged: true
@@ -21,4 +21,4 @@ services:
     network_mode: "host"
     restart: unless-stopped
     volumes:
-      - ~/secrets:/src/secrets
+      - ~/secrets:/statusLights/secrets
